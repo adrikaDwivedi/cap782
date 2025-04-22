@@ -1,0 +1,78 @@
+
+.mainCont {
+    display: flex;
+    /* height: calc(100vh - 150px); Subtract navbar height */
+    width: 100%;
+    /* background-color: blue; */
+    height: 100vh;
+  }
+  
+  .leftH {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../public//block.jpg'); /* Replace with your image URL */
+    background-size: 100%;
+    background-position: relative;
+    background-attachment: local;
+    color: white;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+
+  
+    /* Ethereal glow to the right side */
+    box-shadow: 20px 0 40px rgba(105, 4, 4, 0.3);
+  }
+  
+  
+  
+  .rightH {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:  black;
+
+  }
+  
+  .leftH {
+    background-color: #1c1c1e    ; /* Tailwind Orange-500 for LPU look */
+    color: white;
+    text-align: center;
+                                 
+  }
+  
+  .rightH {
+    background-color: #ffffff;
+  }
+  
+  /* .description {
+    font-size: 1rem;
+    max-width: 80%;
+  } */
+  
+  .bt {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .bt:hover {
+    background-color: #555;
+  }
+  
+  .verticalDivider {
+    width: 0px; /* Divider width */
+    background-color: black; /* Divider color */
+    height: 100%; /* Full height of the container */ 
+    /* margin-left: 50%; */
+  }
