@@ -5,6 +5,7 @@
     width: 100%;
     /* background-color: blue; */
     height: 100vh;
+    
   }
   
   .leftH {
@@ -75,4 +76,35 @@
     background-color: black; /* Divider color */
     height: 100%; /* Full height of the container */ 
     /* margin-left: 50%; */
+  }
+
+  @media (max-width: 768px) {
+    .mainCont {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .leftH {
+      margin-bottom: 20px;
+    }
+  
+    .rightSection h1 {
+      font-size: 2rem;
+    }
+  
+    .button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rightSection h1 {
+      font-size: 1.5rem;
+    }
+  
+    .button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
   }

@@ -2,12 +2,27 @@
 import React from 'react';
 import styles from './Body.module.css';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 // import Image from 'next/image';
 
 const Body = () => {
 
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Mobile if width <= 768px
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const handleRecruiterClick = () => {
     router.push('/StudentList');
   };
@@ -17,11 +32,18 @@ const Body = () => {
   };
 
   return (
-    <div className={styles.mainCont}>
+    <div className={styles.mainCont}
+   
+    style={{
+      flexDirection: isMobile ? 'column' : 'row', // Stack vertically on mobile
+    }}
+    >
       <div className={styles.leftH}>
         {/* <Image/> */}
         <div
   style={{
+    width: isMobile ? '100%' : '50%',
+
     border: "2px solid white",
     borderTopLeftRadius: "20px",
     borderBottomRightRadius: "20px",
@@ -69,7 +91,7 @@ const Body = () => {
 
        <h1
   style={{
-    fontSize: '100px',
+    fontSize: isMobile ? '3rem' : '100px', // Adjust font size for mobile
     fontWeight: '700',
     color: '#f06406', // white text
   //  backgroundColor: '#f06406', // soft brown with some transparency
@@ -88,7 +110,8 @@ const Body = () => {
   style={{
     display: 'flex',
     justifyContent: 'center',
-    gap: '40px',
+    gap: '50px',
+
   }}
 >
 <div
@@ -96,6 +119,8 @@ const Body = () => {
     display: 'flex',
     justifyContent: 'center',
     gap: '40px',
+    flexDirection: isMobile ? 'column' : 'row', // Stack buttons vertically on mobile
+
   }}
 >
   {/* Recruiter */}
