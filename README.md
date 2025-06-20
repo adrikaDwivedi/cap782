@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## About the project:
+
+Developed a responsive academic dashboard using Next.js and Tailwind CSS to streamline student and recruiter
+interactions for the MCA Batch of 2025 at LPU.
+• Implemented dynamic role-based navigation allowing users to seamlessly choose between Recruiter and Student portals
+for a personalized experience.
+• Optimized for performance and scalability, deployed the application on Vercel with fast load times and a clean,
+branded user interface aligned with my college’s identity.
