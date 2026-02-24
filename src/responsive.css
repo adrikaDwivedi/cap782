@@ -1,0 +1,75 @@
+/* ===============================
+   GLOBAL RESPONSIVE UTILITIES
+================================ */
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container spacing */
+.container-custom {
+  padding: 20px;
+}
+
+/* Card responsiveness */
+.card-responsive {
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Buttons full width on mobile */
+.btn-responsive {
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    width: 100%;
+  }
+}
+
+/* Form responsiveness */
+.form-responsive input,
+.form-responsive select,
+.form-responsive textarea {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Flex layout stack on mobile */
+.flex-responsive {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .flex-responsive {
+    flex-direction: column;
+  }
+}
+
+/* Heading resize */
+h1, h2 {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 22px;
+  }
+}
+
+/* Dashboard glowing theme */
+.glow-card {
+  background: linear-gradient(
+    15deg,
+    rgba(17, 243, 217, 0) 0%,
+    rgba(223, 100, 6, 0.92) 40%,
+    rgba(181, 96, 10, 0.95) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(240,100,6,0.4);
+}

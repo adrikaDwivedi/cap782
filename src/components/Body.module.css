@@ -1,37 +1,51 @@
+/* ===============================
+   MAIN CONTAINER
+================================ */
 .mainCont {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  min-height: 100vh; /* instead of fixed height */
+  overflow-x: hidden;
 }
 
+/* ===============================
+   LEFT SECTION
+================================ */
 .leftH {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   background-image: url('/block.jpg');
-  background-size: 100%;
-  background-position: relative;
-  background-attachment: local;
+  background-size: cover;          /* responsive image */
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
   text-align: center;
-  height: 100%;
   padding: 20px;
   background-color: #1c1c1e;
   box-shadow: 20px 0 40px rgba(105, 4, 4, 0.3);
 }
 
+/* ===============================
+   RIGHT SECTION
+================================ */
 .rightH {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: black;
   background-color: #ffffff;
+  padding: 20px;
 }
 
+/* ===============================
+   BUTTON
+================================ */
 .bt {
   background-color: #333;
   color: white;
@@ -47,28 +61,80 @@
   background-color: #555;
 }
 
+/* ===============================
+   DIVIDER
+================================ */
 .verticalDivider {
-  width: 0px;
-  background-color: black;
-  height: 100%;
+  width: 2px;
+  background-color: rgba(0,0,0,0.2);
+  height: auto;
 }
 
+/* ===============================
+   TABLET RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .mainCont {
+    flex-direction: column;
+  }
+
+  .leftH {
+    min-height: 300px;
+    box-shadow: none;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
 @media (max-width: 768px) {
+
   .mainCont {
     flex-direction: column;
     padding: 10px;
   }
 
   .leftH {
-    margin-bottom: 20px;
+    min-height: 250px;
+    padding: 15px;
   }
 
-  .rightSection h1 {
-    font-size: 2rem;
+  .rightH {
+    padding: 15px;
   }
 
-  .button {
+  .bt {
+    width: 100%;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 12px 20px;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+  .leftH {
+    min-height: 200px;
+  }
+
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }

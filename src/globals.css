@@ -1,7 +1,10 @@
-/* Global Styles */
+/* ===============================
+   GLOBAL VARIABLES
+================================ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-orange: #ff7b00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,14 +14,95 @@
   }
 }
 
+
+/* ===============================
+   BASE RESET
+================================ */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+
+  /* smoother fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
+}
+
+
+/* ===============================
+   RESPONSIVE IMAGES
+================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ===============================
+   FORM IMPROVEMENTS
+================================ */
+.form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 8px rgba(255, 123, 0, 0.5);
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ===============================
+   GLOW CARD THEME
+================================ */
+.glow-card {
+  background: linear-gradient(
+    15deg,
+    rgba(17, 243, 217, 0) 0%,
+    rgba(223, 100, 6, 0.92) 40%,
+    rgba(181, 96, 10, 0.95) 100%
+  );
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(240, 100, 6, 0.5);
+}
+
+
+/* ===============================
+   SPINNER LOADER
+================================ */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ===============================
+   OPTIONAL NICE HOVER EFFECTS
+================================ */
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  filter: brightness(1.05);
+  transition: 0.2s ease;
 }
