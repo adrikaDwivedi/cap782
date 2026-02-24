@@ -16,3 +16,13 @@ A responsive academic dashboard built using **React.js** and **CSS** to streamli
 
 ---
 
+## Images
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Student Form
+![Form](screenshots/form.png)
+
+### Student List
+![List](screenshots/list.png)
