@@ -3,9 +3,7 @@ A responsive academic dashboard built using **React.js** and **CSS** to streamli
 ---
 
 ---
-
 ## 📌 Features
-
 - 📊 Responsive academic dashboard UI  
 - 👩‍🎓 Student Portal for academic & profile interaction  
 - 🧑‍💼 Recruiter Portal for viewing student data  
@@ -15,14 +13,14 @@ A responsive academic dashboard built using **React.js** and **CSS** to streamli
 - 🌐 Deployed on Vercel  
 
 ---
-
 ## Images
+## 📸 Screenshots
 
-### Home Page
-![Home](screenshots/home.png)
+<p align="center">
+  <img src="screenshots/home.png" width="45%" height="auto" />
+  <img src="screenshots/form.png" width="45%" height="auto" />
+</p>
 
-### Student Form
-![Form](screenshots/form.png)
-
-### Student List
-![List](screenshots/list.png)
+<p align="center">
+  <img src="screenshots/list.png" width="70%" height="auto" />
+</p>
